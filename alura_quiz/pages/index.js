@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import db from '../db.json';
 
-
 //criando um componente e puxando o style components
 
 //const Title = styled.h1`
@@ -43,7 +42,6 @@ const Widget = styled.div`
     border-radius: 10px;
     overflow:hidden;
 
-
     h1, h2, h3{
       font-size: 16px;
       font-weight:700;
@@ -57,17 +55,36 @@ const Widget = styled.div`
     }
 `;
 
+Widget.Content = styled.div`
+  padding: 24px 32px 32px 32px;
+  & > *::first-child{
+    margin-top: 0;
+  }
+  & > *::last-child{
+    margin-bottom: 0;
+  }
+  ul{
+    list-style: none;
+    padding:0;
+  }
+`
+
 
 export default function Home() {
   return (
     <BackgroundImage>
       <QuizContainer>
         <Widget>
-          <h1>titulo</h1>
-          <p>lorem lorem lorem</p>
+          <Widget.Content>
+            <h1>titulo</h1>
+            <p>lorem lorem lorem</p>
+          </Widget.Content>
         </Widget>
         <Widget>
-        x
+        <Widget.Content>
+            <h1>titulo</h1>
+            <p>lorem lorem lorem</p>
+          </Widget.Content>
         </Widget>
       </QuizContainer> 
     </BackgroundImage>

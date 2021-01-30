@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import db from '../db.json';
 import Widget from '../src/components/Widget';
+import QuizBackground from '../src/components/QuizBackground';
+
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 
 //criando um componente e puxando o style components
 
@@ -56,6 +60,7 @@ export default function Home() {
             <p>lorem lorem lorem</p>
           </Widget.Content>
         </Widget>
+        <Footer/>
       </QuizContainer> 
     </BackgroundImage>
   );

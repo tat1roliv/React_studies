@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import db from '../db.json';
+import Widget from '../src/components/Widget';
 
 //criando um componente e puxando o style components
 
@@ -16,6 +17,7 @@ import db from '../db.json';
  // )
 //}
 
+//background
 const BackgroundImage = styled.div`
     background-image: url(${db.bg});
     flex: 1;
@@ -23,6 +25,7 @@ const BackgroundImage = styled.div`
     background-position: left;
 `;
 
+//container + responsividade
 export const QuizContainer = styled.div`
     width: 100%;
     max-width: 350px;
@@ -34,49 +37,16 @@ export const QuizContainer = styled.div`
     }
 `;
 
-const Widget = styled.div`
-    background-color: #1C1814;
-    margin-top:24px;
-    margin-bottom: 24px;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    overflow:hidden;
-
-    h1, h2, h3{
-      font-size: 16px;
-      font-weight:700;
-      line-height: 1;
-      margin-bottom: 0;
-    }
-    p{
-      font-size:14px;
-      font-weight: 400;
-      line-height:1; 
-    }
-`;
-
-Widget.Content = styled.div`
-  padding: 24px 32px 32px 32px;
-  & > *::first-child{
-    margin-top: 0;
-  }
-  & > *::last-child{
-    margin-bottom: 0;
-  }
-  ul{
-    list-style: none;
-    padding:0;
-  }
-`
-
-
+//export funcao
 export default function Home() {
   return (
     <BackgroundImage>
       <QuizContainer>
         <Widget>
           <Widget.Content>
-            <h1>titulo</h1>
+            <Widget.Header>
+              <h1>titulo</h1>
+            </Widget.Header>
             <p>lorem lorem lorem</p>
           </Widget.Content>
         </Widget>

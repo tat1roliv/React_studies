@@ -33,9 +33,10 @@ export default function Footer(props) {
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
       <p>
-        hola que tal, estudando pra não passar vergonha no estágio :P
+        hola que tal,
+
         {' '}
-        
+        :P
         {' '}
         <a href="https://www.alura.com.br/">
           <span>Imersão</span>

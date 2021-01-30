@@ -26,7 +26,7 @@ const BackgroundImage = styled.div`
     background-image: url(${db.bg});
     flex: 1;
     background-size: cover;
-    background-position: left;
+    background-position: center;
 `;
 
 //container + responsividade

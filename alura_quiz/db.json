@@ -1,5 +1,5 @@
 {
-    "bg": "https://i.picsum.photos/id/146/5184/3456.jpg?hmac=G_lxX9tIxlu06vWGZhaLVSwVD0Id60UslhgveMXNEpo",
+    "bg": "https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     "title": "Quiz JavaScript #AluraQuiz",
     "description": "Um quiz rápido sobre o mundo do JavaScript",
     "questions": [
@@ -49,11 +49,11 @@
     ],
     "theme": {
       "colors": {
-        "primary": "#3d5afe",
-        "secondary": "#ff5722",
+        "primary": "#ff6e40",
+        "secondary": "#bf360c",
         "mainBg": "#213f4e",
         "contrastText": "#FFFFFF",
-        "wrong": "#FF5722",
+        "wrong": "#bf360c",
         "success": "#4CAF50"
       },
       "borderRadius": "4px"

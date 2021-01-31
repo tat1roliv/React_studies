@@ -12,6 +12,7 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import { useState } from 'react';
 
+
 // export funcao
 export default function Home() {
   const router = useRouter();

@@ -5,6 +5,7 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
+import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
@@ -66,14 +67,16 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
               //router manda para a proxima pagina
             }}>
-              <input 
-              onChange = {function(infosDoEvento){
-                console.log(infosDoEvento.target.value);
+              <Input
+                name="userName"
+                onChange = {function(infosDoEvento){
+                //console.log(infosDoEvento.target.value);
                 //State
                 //name = infosDoEvento.target.value;
                 setName(infosDoEvento.target.value);
               }} 
               placeholder="Escreva seu nome..."  
+              value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
                 Jogar {name}!

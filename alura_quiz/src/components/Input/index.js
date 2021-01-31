@@ -20,12 +20,13 @@ const InputBase = styled.input`
 `;
 
 export default function Input({ onChange, placeholder, ...props }) {
+ 
   return (
     <div>
       <InputBase
         placeholder={placeholder}
         onChange={onChange}
-        // eslint-disable-next-line react/jsx-props-no-spreading
+        //eslint-disable-next-line react/jsx-props-no-spreading
         {...props}
       />
     </div>
@@ -36,7 +37,7 @@ Input.defaultProps = {
   value: '',
 };
 
-Input.propTypes = {
+Input.propTypes = { //boa pratica,validacao/ substituicao tipo de dado
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

@@ -6,6 +6,7 @@ import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Button from '../src/components/Button';
+import Input from '../src/components/Input';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import { useState } from 'react';
@@ -66,7 +67,7 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
               //router manda para a proxima pagina
             }}>
-              <input 
+              <Input 
               onChange = {function(infosDoEvento){
                 console.log(infosDoEvento.target.value);
                 //State

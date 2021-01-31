@@ -7,6 +7,7 @@ import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
+import { useState } from 'react';
 
 // criando um componente e puxando o style components
 
@@ -47,6 +48,9 @@ export const QuizContainer = styled.div`
 // export funcao
 export default function Home() {
   const router = useRouter();
+  const [name, setName] = React.useState('');
+  console.log('retorno do use state', name, setName);
+
   return (
     <BackgroundImage>
       <QuizContainer>
@@ -58,13 +62,20 @@ export default function Home() {
           <Widget.Content>
             <form onSubmit={ function(infosDoEvento){
               infosDoEvento.preventDefault();
-              const name = 'name';
               router.push(`/quiz?name=${name}`);
               //router manda para a proxima pagina
             }}>
-              <input placeholder="Escreva seu nome..."/>
-              <button type="submit">
-                Jogar [seuNome]
+              <input 
+              onChange = {function(infosDoEvento){
+                console.log(infosDoEvento.target.value);
+                //State
+                //name = infosDoEvento.target.value;
+                setName(infosDoEvento.target.value);
+              }} 
+              placeholder="Escreva seu nome..."  
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Jogar {name}!
               </button>
             </form>
           </Widget.Content>

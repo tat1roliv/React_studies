@@ -4,48 +4,13 @@ import { useRouter } from 'next/router';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
+import QuizContainer from '../src/components/QuizContainer';
 import QuizBackground from '../src/components/QuizBackground';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import { useState } from 'react';
-
-// criando um componente e puxando o style components
-
-// const Title = styled.h1`
-// font-size: 50px;
-// color: ${({ theme }) => theme.colors.primary};
-// `
-
-// function Title(props){ //props /calopsita /var qualquer
-//  return (
-// <h1>
-// {props.children}
-// </h1>
-// )
-// }
-
-// background
-const BackgroundImage = styled.div`
-    background-image: url(${db.bg});
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-`;
-
-
-// container + responsividade
-export const QuizContainer = styled.div`
-    width: 100%;
-    max-width: 350px;
-    padding-top: 45px;
-    margin:auto 10%;
-    @media screen and (max-width:500px) {
-      margin: auto;
-      padding: 15px;
-    }
-`;
 
 // export funcao
 export default function Home() {
@@ -54,7 +19,7 @@ export default function Home() {
   console.log('retorno do use state', name, setName);
 
   return (
-    <BackgroundImage>
+    <QuizBackground backgroundImage = {db.bg}>
       <QuizContainer>
         <QuizLogo />
         <Widget>
@@ -92,6 +57,6 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-    </BackgroundImage>
+    </QuizBackground>
   );
 }

@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/*home (ex component)*/}
+        {/* home (ex component) */}
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Component {...pageProps} />
       </ThemeProvider>

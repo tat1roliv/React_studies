@@ -9,6 +9,7 @@ const Button = styled.button`
 
   width: 100%;
   padding: 10px 16px;
+  margin-top:20px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
@@ -23,7 +24,7 @@ const Button = styled.button`
   }
 
   &:disabled {
-    background-color: #979797;
+    background-color: #648dae;
     cursor: not-allowed;
   }
 `;

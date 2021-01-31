@@ -5,6 +5,7 @@ import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
 import QuizBackground from '../src/components/QuizBackground';
+import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import { useState } from 'react';
@@ -74,9 +75,9 @@ export default function Home() {
               }} 
               placeholder="Escreva seu nome..."  
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Jogar {name}!
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>

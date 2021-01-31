@@ -57,7 +57,7 @@ function QuestionWidget({
         <p>
           {question.description}
         </p>
-
+            
         <form
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
@@ -72,7 +72,7 @@ function QuestionWidget({
                 htmlFor={alternativeId}
               >
                 <input
-                  // style={{ display: 'none' }}
+                  style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   type="radio"
@@ -114,7 +114,7 @@ export default function QuizPage() {
     // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 1 * 1500);
   // nasce === didMount
   }, []);
 
